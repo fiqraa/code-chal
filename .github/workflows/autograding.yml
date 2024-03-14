@@ -20,10 +20,10 @@ jobs:
         continue-on-error: true
       - name: Get current date
         id: date
-        run: echo "::set-output name=date::$(date +'%d-%m-%Y')"
+        run: echo "::set-output name=date::$(TZ=":Asia/Bangkok" date +'%d-%m-%Y')"
       - name: Get current time
         id: time
-        run: echo "::set-output name=time::$(date +'%H:%M:%S')"
+        run: echo "::set-output name=time::$(TZ=":Asia/Bangkok" date +'%H:%M:%S')"
 
       - id: "append_points"
         uses: jroehl/gsheet.action@v1.1.0
