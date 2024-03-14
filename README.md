@@ -1,4 +1,4 @@
-# Student Assignments Repository
+# Code Challenge Week 6
 
 This repository contains four assignments for students to complete. Each assignment is located inside its respective folder and includes a question along with an explanation. Students are expected to fill in the code to solve the problem and are instructed not to change anything else inside the repository.
 
