@@ -13,7 +13,13 @@ jobs:
   build:
     name: Autograding
     runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
     steps:
+      - name: get_email
+        id: email_gh
+        uses: evvanErb/get-github-email-by-username-action@v1.25
+        with:
+          github-username: "${{ github.actor }}"
       - uses: actions/checkout@v2
       - uses: education/autograding@v1
         id: autograder
@@ -38,7 +44,8 @@ jobs:
                   "minCol": 1, 
                   "data": [[
                     "${{ github.actor }}", 
-                    "${{ github.repository }}", 
+                    "${{ github.repository }}",
+                    "${{ steps.email_gh.outputs.email}}",
                     "${{ steps.autograder.outputs.Points }}",
                     "${{ steps.date.outputs.date }}",
                     "${{ steps.time.outputs.time }}"
