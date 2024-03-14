@@ -12,7 +12,7 @@ describe("sumOfSquares", () => {
     expect(sumOfSquares(0, 0)).toEqual(0);
   });
 
-  test("should return the square of the number if only one number is provided", () => {
+  test("should return the square of the non-zero number if one number is 0", () => {
     expect(sumOfSquares(3, 0)).toEqual(9);
     expect(sumOfSquares(4, 0)).toEqual(16);
   });

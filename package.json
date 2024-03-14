@@ -10,5 +10,12 @@
   },
   "scripts": {
     "test": "jest"
-  }
+  },
+  "jest": {
+    "testMatch": [
+      "**/__tests__/**/*.js",
+      "**/?(*.)+(spec|test).[tj]s?(x)",
+      "**/.github/test/**/*.js"
+    ]
+  }  
 }

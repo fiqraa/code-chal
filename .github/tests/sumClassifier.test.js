@@ -3,7 +3,7 @@ const sumClassifier = require("../../sumClassifier/sumClassifier.js");
 
 describe("sumClassifier", () => {
   test("should classify the sum of numbers as Large, Equal, or Small", () => {
-    expect(sumClassifier([3, 5, 2])).toEqual("Large Sum");
+    expect(sumClassifier([3, 5, 2])).toEqual("Equal Sum");
     expect(sumClassifier([1, 4, 5])).toEqual("Equal Sum");
     expect(sumClassifier([2, 2, 1])).toEqual("Small Sum");
   });
@@ -20,6 +20,6 @@ describe("sumClassifier", () => {
 
   test('should return "Small Sum" for a sum less than 10', () => {
     expect(sumClassifier([2, 3])).toEqual("Small Sum");
-    expect(sumClassifier([1, 1, 1, 1, 1, 1, 1, 1, 1, 1])).toEqual("Small Sum");
+    expect(sumClassifier([1, 1, 1, 1, 1, 1, 1, 1])).toEqual("Small Sum");
   });
 });

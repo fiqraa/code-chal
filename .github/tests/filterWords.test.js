@@ -6,12 +6,14 @@ describe("filterWords", () => {
     expect(filterWords(["apple", "banana", "kiwi", "orange"])).toEqual([
       "apple",
       "banana",
+      "kiwi",
       "orange",
     ]);
     expect(filterWords(["cat", "dog", "bat"])).toEqual([]);
     expect(filterWords(["elephant", "giraffe", "lion"])).toEqual([
       "elephant",
       "giraffe",
+      "lion",
     ]);
   });
 
